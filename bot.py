@@ -23,7 +23,7 @@ logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s'
 print("Starting...")
 
 # Basics
-APP_ID = os.environ.get("APP_ID", default=None, cast=int)
+APP_ID = int(os.environ.get("APP_ID", default=None))
 API_HASH = os.environ.get("API_HASH", default=None)
 SESSION = os.environ.get("SESSION")
 FROM_ = os.environ.get("FROM_CHANNEL")
