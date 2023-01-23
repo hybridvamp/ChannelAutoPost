@@ -29,8 +29,8 @@ SESSION = os.environ.get("SESSION")
 FROM_ = os.environ.get("FROM_CHANNEL")
 TO_ = os.environ.get("TO_CHANNEL")
 
-FROM = [int(i) for i in FROM_.split()]
-TO = [int(i) for i in TO_.split()]
+FROM_ = os.environ.get("FROM_CHANNEL").strip("'")
+TO_ = os.environ.get("TO_CHANNEL").strip("'")
 
 try:
     BotzHubUser = TelegramClient(StringSession(SESSION), APP_ID, API_HASH)
